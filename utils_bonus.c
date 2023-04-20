@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 00:04:36 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/19 02:04:46 by ykhalil-         ###   ########.fr       */
+/*   Created: 2023/04/19 01:26:36 by ykhalil-          #+#    #+#             */
+/*   Updated: 2023/04/20 01:19:50 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-void	ft_move_w(t_main *x)
+void	ft_move_w_bonus(t_main *x)
 {
 	pl_posit(x);
 	x->i = x->ipo;
@@ -30,14 +30,14 @@ void	ft_move_w(t_main *x)
 			x->collect++;
 		x->stora[x->i - 1][x->j] = 'P';
 		x->stora[x->i][x->j] = '0';
-		ft_printf("moves : %d\n", ++x->moves);
 		ardlmaydan(x);
 		kolchi(x);
+		ft_put_str_win(x);
 		return ;
 	}
 }
 
-void	ft_move_s(t_main *x)
+void	ft_move_s_bonus(t_main *x)
 {
 	pl_posit(x);
 	x->i = x->ipo;
@@ -55,14 +55,14 @@ void	ft_move_s(t_main *x)
 			x->collect++;
 		x->stora[x->i + 1][x->j] = 'P';
 		x->stora[x->i][x->j] = '0';
-		ft_printf("moves : %d\n", ++x->moves);
 		ardlmaydan(x);
 		kolchi(x);
+		ft_put_str_win(x);
 		return ;
 	}
 }
 
-void	ft_move_a(t_main *x)
+void	ft_move_a_bonus(t_main *x)
 {
 	pl_posit(x);
 	x->i = x->ipo;
@@ -80,14 +80,14 @@ void	ft_move_a(t_main *x)
 			x->collect++;
 		x->stora[x->i][x->j - 1] = 'P';
 		x->stora[x->i][x->j] = '0';
-		ft_printf("moves : %d\n", ++x->moves);
 		ardlmaydan(x);
 		kolchi(x);
+		ft_put_str_win(x);
 		return ;
 	}
 }
 
-void	ft_move_d(t_main *x)
+void	ft_move_d_bonus(t_main *x)
 {
 	pl_posit(x);
 	x->i = x->ipo;
@@ -105,14 +105,14 @@ void	ft_move_d(t_main *x)
 			x->collect++;
 		x->stora[x->i][x->j + 1] = 'P';
 		x->stora[x->i][x->j] = '0';
-		ft_printf("moves : %d\n", ++x->moves);
 		ardlmaydan(x);
 		kolchi(x);
+		ft_put_str_win(x);
 		return ;
 	}
 }
 
-int	deal_key(int key, t_main *x)
+int	deal_key_bonus(int key, t_main *x)
 {
 	if (key == KEY_ESC)
 	{
@@ -120,12 +120,12 @@ int	deal_key(int key, t_main *x)
 		exit(0);
 	}
 	else if (key == KEY_W)
-		ft_move_w(x);
+		ft_move_w_bonus(x);
 	else if (key == KEY_A)
-		ft_move_a(x);
+		ft_move_a_bonus(x);
 	else if (key == KEY_S)
-		ft_move_s(x);
+		ft_move_s_bonus(x);
 	else if (key == KEY_D)
-		ft_move_d(x);
+		ft_move_d_bonus(x);
 	return (0);
 }

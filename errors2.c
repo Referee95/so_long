@@ -6,19 +6,19 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 23:16:38 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/16 23:42:39 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/04/20 01:53:08 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void werror2 (t_main *x)
+void	werror2(t_main *x)
 {
 	write(2, "Error\n", 6);
 	ft_free(x->stora);
-	free(x);
 	exit(1);
 }
+
 void	error4(t_main *x)
 {
 	x->i = -1;

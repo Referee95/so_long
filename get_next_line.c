@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 10:01:49 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/17 02:41:10 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/04/18 05:41:16 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ char	*get_next_line(int fd)
 	if (!line || !line[0])
 		return (0);
 	etc = ft_etc(etc);
-	// free(etc);
+	if (line[0] == '\n')
+		free(etc);
 	return (line);
 }

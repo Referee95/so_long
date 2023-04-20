@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 03:22:12 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/17 02:40:43 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/04/20 02:29:07 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	destroy_game(t_main *x)
 {
-	x->collect = 0;
+	ft_free2(x);
 	exit(0);
 	return (0);
 }
@@ -35,12 +35,10 @@ void	doz_ahbibi2(t_main *x)
 			if (x->ptr[i][j] == 'E')
 			{
 				ft_printf("bghiti tqolbni wla");
-				free(x->ptr);
-				free(x->stora);
-				free(x->str);
-				free(x);
-				while(1);
-				exit(0);
+				ft_free(x->ptr);
+				ft_free(x->stora);
+				ft_free(x->str);
+				exit(1);
 			}
 		}
 	}
@@ -60,11 +58,10 @@ void	doz_ahbibi(t_main *x)
 			if (x->str[i][j] == 'C')
 			{
 				ft_printf("bghiti tqolbni wla");
-				free(x->ptr);
-				free(x->stora);
-				free(x->str);
-				free(x);
-				exit(0);
+				ft_free(x->ptr);
+				ft_free(x->stora);
+				ft_free(x->str);
+				exit(1);
 			}
 		}
 	}

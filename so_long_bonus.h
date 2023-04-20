@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 00:28:47 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/20 02:21:16 by ykhalil-         ###   ########.fr       */
+/*   Created: 2023/04/19 00:06:05 by ykhalil-          #+#    #+#             */
+/*   Updated: 2023/04/20 02:04:06 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # include <fcntl.h>
 # include <mlx.h>
@@ -85,11 +85,11 @@ void		xpm_to_image(t_main *x);
 void		ardlmaydan(t_main *x);
 void		kolchi(t_main *x);
 int			pl_posit(t_main *x);
-void		ft_move_w(t_main *x);
-void		ft_move_s(t_main *x);
-void		ft_move_a(t_main *x);
-void		ft_move_d(t_main *x);
-int			deal_key(int key, t_main *x);
+void		ft_move_w_bonus(t_main *x);
+void		ft_move_s_bonus(t_main *x);
+void		ft_move_a_bonus(t_main *x);
+void		ft_move_d_bonus(t_main *x);
+int			deal_key_bonus(int key, t_main *x);
 int			destroy_game(t_main *x);
 void		doz_ahbibi(t_main *x);
 void		doz_ahbibi2(t_main *x);
@@ -102,6 +102,11 @@ void		image_error(t_main *x);
 void		image_error2(t_main *x);
 void		map_free(t_main *x);
 void		newline_error(t_main *x);
+char		*ft_itoa(int n);
+char		*memnumber(long long n, char *str, size_t len);
+size_t		ft_len(long long number);
+void		ft_put_str_win(t_main *x);
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100
 # endif
