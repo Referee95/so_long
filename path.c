@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 03:22:12 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/20 02:29:07 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:22:28 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	destroy_game(t_main *x)
 	return (0);
 }
 
-void	doz_ahbibi2(t_main *x)
+void	valid_path2(t_main *x)
 {
 	int	i;
 	int	j;
@@ -44,7 +44,7 @@ void	doz_ahbibi2(t_main *x)
 	}
 }
 
-void	doz_ahbibi(t_main *x)
+void	valid_path(t_main *x)
 {
 	int	i;
 	int	j;

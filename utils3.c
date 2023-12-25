@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 23:35:54 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/18 23:43:00 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:09:42 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	image_error2(t_main *x)
 		mlx_destroy_image(x->mlx_ptr, x->ptr_0);
 	if (x->ptr_1)
 		mlx_destroy_image(x->mlx_ptr, x->ptr_1);
-	if (!x->ptr_c)
+	if (x->ptr_c)
 		mlx_destroy_image(x->mlx_ptr, x->ptr_c);
 	if (x->ptr_e)
 		mlx_destroy_image(x->mlx_ptr, x->ptr_e);

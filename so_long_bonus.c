@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 23:43:49 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/20 02:25:11 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:23:12 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ int	main(int ac, char **av)
 		x.ptr = read_all(&x, av[1]);
 		check_path(&x, x.ipo, x.jpo);
 		check_path2(&x, x.ipo, x.jpo);
-		doz_ahbibi(&x);
-		doz_ahbibi2(&x);
+		valid_path(&x);
+		valid_path2(&x);
 		x.mlx_ptr = mlx_init();
 		x.win_ptr = mlx_new_window(x.mlx_ptr, (x.j + 1) * 50, x.i * 50,
 				"so_long");

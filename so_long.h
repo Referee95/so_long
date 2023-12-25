@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 00:28:47 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/04/20 02:21:16 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:22:46 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ void		ft_move_a(t_main *x);
 void		ft_move_d(t_main *x);
 int			deal_key(int key, t_main *x);
 int			destroy_game(t_main *x);
-void		doz_ahbibi(t_main *x);
-void		doz_ahbibi2(t_main *x);
+void		valid_path(t_main *x);
+void		valid_path2(t_main *x);
 void		check_path(t_main *x, int a, int b);
 void		check_path2(t_main *x, int a, int b);
 void		valid_path(t_main *x);
